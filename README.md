@@ -2,7 +2,7 @@
 A simple Twitter-like application built with **Django**, where users can register, log in, and create, edit, and delete tweets.  
 
 ---
-![Uploading image.png…]()
+<img width="926" height="532" alt="image" src="https://github.com/user-attachments/assets/a26c31ea-7126-45b3-adf4-8ea3a7e9ee71" />
 <img width="1352" height="605" alt="image" src="https://github.com/user-attachments/assets/a323d31b-9251-49e2-bc34-0bd670e74fb1" />
 <img width="1211" height="592" alt="image" src="https://github.com/user-attachments/assets/bbcfdd22-2d3f-4cd1-abec-8d454ee87e21" />
 
