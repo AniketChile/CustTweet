@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Add Tweet
+{% endblock title %}
+
+{% block mainHeading %}
+Become who you are meant to be, speak your truth and tweet what your heart truly desires.
+{% endblock mainHeading %}
+
+
+{% block mainContent %}
+
+<h2 class="text-center mt-3">{% if form.instance.pk %}
+    Edit Tweet
+  {% else %}
+      Create tweet 
+  {% endif %}
+  </h2>
+
+  <div class="container">
+    <form method="POST" enctype="multipart/form-data" class="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-warning" type="submit">Submit</button>
+      </form>
+      <a href="{% url 'tweet_list' %}" class="btn btn-primary mt-2">Back to Home Page</a>
+  </div>
+{% endblock mainContent %}

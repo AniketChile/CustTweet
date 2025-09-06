@@ -1,0 +1,59 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}
+          tweet
+        {% endblock title %} | Tweet
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  
+  <body class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'tweet_list' %}">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <a href="{% url 'tweet_list' %}" class="btn btn-primary mx-2">CustTweet</a>
+            
+            {% if user.is_authenticated %}
+              <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button class="btn btn-danger">Logout</button>
+              </form>             
+            {% endif %}
+            <a href="{% url 'register' %}" class="btn btn-primary mx-2">Register</a>
+            <a href="{% url 'login' %}" class="btn btn-outline-success mx-2">Login</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <h1 class="text-center">
+      {% block mainHeading %}
+        Tweet Home
+      {% endblock mainHeading %}
+    </h1>
+    <div>
+      {% block mainContent %}
+      Tweet Body
+    {% endblock mainContent %}
+    </div>
+   
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
