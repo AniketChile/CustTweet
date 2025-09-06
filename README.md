@@ -5,7 +5,7 @@ A simple Twitter-like application built with **Django**, where users can registe
 <img width="926" height="532" alt="image" src="https://github.com/user-attachments/assets/a26c31ea-7126-45b3-adf4-8ea3a7e9ee71" />
 <img width="1352" height="605" alt="image" src="https://github.com/user-attachments/assets/a323d31b-9251-49e2-bc34-0bd670e74fb1" />
 <img width="1211" height="592" alt="image" src="https://github.com/user-attachments/assets/bbcfdd22-2d3f-4cd1-abec-8d454ee87e21" />
-
+<img width="875" height="608" alt="image" src="https://github.com/user-attachments/assets/8bbaca7d-0247-4398-a63c-17b80420c7ea" />
 
 ## 🚀 Features
 - User authentication (Register, Login, Logout).  
